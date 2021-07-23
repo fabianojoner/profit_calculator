@@ -17,6 +17,6 @@ profit_total = profit_df["profit"].sum()
 print('Lucro Total da Acquirer LTDA: ' + str(profit_total))
 
 persist_data = datetime.today().strftime('%Y-%m-%d-%H:%M:%S'), profit_total
-with open('data/output.csv', 'w', encoding='UTF8') as out_file:
+with open('data/output.csv', 'a', encoding='UTF8') as out_file:
     writer = csv.writer(out_file)
     writer.writerow(persist_data)
